@@ -1,0 +1,20 @@
+﻿@model MyLibraryV2.Models.Book;
+@{
+    ViewData["Title"] = "Order-";
+}
+
+
+<div class="jumbotron" style="margin-top:75px">
+    <p style="margin-left:20px">Here is your current order</p>
+    <div class="jumbotron jumbotron-fluid" style="background:white">
+        <h3>Book order for <span style="font-weight:bold">@Model.Name</span></h3>
+        <br />
+        <h4 style="font-style:italic">Created on @DateTime.Now</h4>
+    </div>
+    <hr class="my-4">
+</div>
+<button class="btn btn-secondary">
+    <a asp-action="ViewOrders"><span style="color:black;">Click here to see all your orders</span></a>
+</button>
+
+

@@ -1,0 +1,26 @@
+﻿@model MyLibraryV2.Models.Book
+@{
+    ViewData["Title"] = "Add-";
+}
+
+<form asp-action="AddBook" asp-controller="Book">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="row" style="margin-top:75px; margin-left:100px;">
+        <div class="input-group mb-3">
+            <div><input asp-for="Name" class="form-control" type="text" placeholder="Book Name" style="height:43px;" /> <span asp-validation-for="Name" class="text-danger"></span></div>
+        </div>
+        <br />
+        <div class="input-group mb-3">
+            <div>
+                <input asp-for="Genre" class="form-control" type="text" placeholder="Genre" style="height:43px;" />
+                <span asp-validation-for="Genre" class="text-danger"></span>
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <button type="submit" style="width:90px;height:40px;" class="btn btn-sm btn-default"><i class="fas fa-rocket fa-2x"></i></button>
+        </div>
+    </div>
+</form>
+
+

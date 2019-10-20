@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MyLibraryV2.Models.Book>
+@{
+    ViewData["Title"] = "Rent-";
+}
+
+
+<div class="col-sm-4" style="padding-top:20px;">
+    </br>
+    <h4 style="margin-bottom:30px; font-style:italic;">Please select a book to rent from below</h4>
+</div>
+
+<div style="margin-left:10px" class="table-bod">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Genre</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <td><a asp-action="RentABook" asp-route-id="@book.Id">@book.Name</a></td>
+                    <td>@book.Genre</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+</div>
+
