@@ -38,7 +38,7 @@ namespace MyLibraryV2.Controllers
                 throw new Exception("Book already exists");
             }
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
         }
         public async Task<IActionResult> RentABook(int? id)
         {
